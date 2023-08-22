@@ -6,16 +6,38 @@
     android:orientation="vertical">
 
     <LinearLayout
+        android:id="@+id/header"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="20"
-        android:background="#FF5733"/>
+        android:layout_weight="15"
+        android:background="#00BCD4">
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:gravity="center"
+            android:text="Argentina Programa 4.0 - TICMAS"
+            android:textColor="#000000"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:background="#FAB6B6"
+        android:gravity="center"
+        android:textColor="#000000"
+        android:text="Proyecto Final de Desarrollo de Aplicaciones Móviles" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="25"
-        android:background="#C70039"
+        android:background="#FFFFFF"
         android:orientation="vertical"
         android:gravity="center">
 
@@ -59,21 +81,22 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="15"
-        android:background="#900C3F"
+        android:background="#FFFFFF"
         android:gravity="center">
 
         <Button
             android:id="@+id/comparar_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Comparar"/>
+            android:text="Comparar"
+            android:layout_gravity="center" />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="20"
-        android:background="#581845"
+        android:background="#FFFFFF"
         android:gravity="center">
 
         <LinearLayout
@@ -102,6 +125,16 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="10"
-        android:background="#17202A"/>
+        android:layout_weight="5"
+        android:background="#00BCD4"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/copyright"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="Copyright - 2023   🔥©🔥    Maxi G. Zarate" />
+    </LinearLayout>
+
 </LinearLayout>
