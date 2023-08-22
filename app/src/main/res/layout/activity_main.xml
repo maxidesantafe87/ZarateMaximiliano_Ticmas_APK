@@ -1,140 +1,164 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:fillViewport="true">
+
+
+
 
     <LinearLayout
-        android:id="@+id/header"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="15"
-        android:background="#00BCD4">
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="15"
+            android:orientation="vertical"
+            android:background="@drawable/bandera_argentina">
+
+            <TextView
+                android:id="@+id/tv_Argentina_Programa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:layout_gravity="center_horizontal"
+                android:text="Argentina    Programa"
+                android:textColor="@color/black"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/AgentOrange" />
+
+            <TextView
+                android:id="@+id/tv_Ticmas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_gravity="center_horizontal|bottom"
+                android:text="Ticmas"
+                android:textColor="@color/black"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/AgentOrange" />
+
+        </LinearLayout>
+
 
         <TextView
-            android:id="@+id/textView3"
+            android:id="@+id/textView2"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
+            android:layout_height="38dp"
+            android:background="#FAB6B6"
             android:gravity="center"
-            android:text="Argentina Programa 4.0 - TICMAS"
-            android:textColor="#000000"
-            android:textSize="22sp"
-            android:textStyle="bold" />
-    </LinearLayout>
+            android:textColor="@color/black"
+            android:text="Proyecto Final de Desarrollo de Aplicaciones Móviles" />
+                <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="25"
+            android:background="#FFFFFF"            android:orientation="vertical"
+            android:gravity="center">
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="match_parent"
-        android:layout_height="38dp"
-        android:background="#FAB6B6"
-        android:gravity="center"
-        android:textColor="#000000"
-        android:text="Proyecto Final de Desarrollo de Aplicaciones Móviles" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="25"
-        android:background="#FFFFFF"
-        android:orientation="vertical"
-        android:gravity="center">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ingresa la primera palabra"/>
+
+                <EditText
+                    android:id="@+id/texto_n1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Cuadro de texto 1"
+                    android:padding="8dp"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="8dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ingresa la segunda palabra"/>
+
+                <EditText
+                    android:id="@+id/texto_n2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Cuadro de texto 2"
+                    android:padding="8dp"/>
+            </LinearLayout>
+        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
+            android:layout_height="0dp"
+            android:layout_weight="15"
+            android:background="#FFFFFF"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/comparar_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Comparar"
+                android:layout_gravity="center" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="20"
+            android:background="#FFFFFF"
+            android:gravity="center">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/resultado"
+                    android:visibility="invisible"
+                    android:layout_width="match_parent"
+                    android:layout_height="90dp"
+                    android:layout_weight="0.7"
+                    android:background="@drawable/fondo_redondeado"
+                    android:gravity="center"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:textColor="#000000"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="5"
+            android:background="#00BCD4"
             android:gravity="center">
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Ingresa la primera palabra"/>
-
-            <EditText
-                android:id="@+id/texto_n1"
+                android:id="@+id/copyright"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Cuadro de texto 1"
-                android:padding="8dp"/>
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="8dp"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Ingresa la segunda palabra"/>
-
-            <EditText
-                android:id="@+id/texto_n2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Cuadro de texto 2"
-                android:padding="8dp"/>
-        </LinearLayout>
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="15"
-        android:background="#FFFFFF"
-        android:gravity="center">
-
-        <Button
-            android:id="@+id/comparar_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Comparar"
-            android:layout_gravity="center" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="20"
-        android:background="#FFFFFF"
-        android:gravity="center">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:layout_marginStart="30dp"
-            android:layout_marginEnd="30dp"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/resultado"
-                android:visibility="invisible"
-                android:layout_width="match_parent"
-                android:layout_height="90dp"
-                android:layout_weight="0.7"
-                android:background="@drawable/fondo_redondeado"
+                android:layout_height="match_parent"
                 android:gravity="center"
-                android:textSize="24sp"
-                android:textStyle="bold"
-                android:textColor="#000000"/>
+                android:text="Copyright - 2023   🔥©🔥    Maxi G. Zarate" />
         </LinearLayout>
+
     </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="5"
-        android:background="#00BCD4"
-        android:gravity="center">
-
-        <TextView
-            android:id="@+id/copyright"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:text="Copyright - 2023   🔥©🔥    Maxi G. Zarate" />
-    </LinearLayout>
-
-</LinearLayout>
+</ScrollView>
