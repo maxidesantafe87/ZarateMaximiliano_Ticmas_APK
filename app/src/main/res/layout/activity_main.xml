@@ -87,7 +87,9 @@
                     android:layout_height="wrap_content"
                     android:hint="Cuadro de texto 1"
                     android:padding="8dp"
-                    tools:ignore="TouchTargetSizeCheck" />
+                    android:textColor="@android:color/black"
+
+                tools:ignore="TouchTargetSizeCheck" />
 
                 <View
                     android:layout_width="match_parent"
@@ -104,7 +106,9 @@
                     android:layout_height="wrap_content"
                     android:hint="Cuadro de texto 2"
                     android:padding="8dp"
-                    tools:ignore="TouchTargetSizeCheck" />
+                    android:textColor="@android:color/black"
+
+                tools:ignore="TouchTargetSizeCheck" />
             </LinearLayout>
         </LinearLayout>
 

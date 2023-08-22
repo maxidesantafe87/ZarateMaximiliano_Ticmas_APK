@@ -7,43 +7,58 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import android.view.inputmethod.InputMethodManager
+import android.media.MediaPlayer
 
 class MainActivity : AppCompatActivity() {
+    private lateinit var editTextN1: EditText
+    private lateinit var editTextN2: EditText
+    private lateinit var resultado: TextView
+    private lateinit var compararButton: Button
+    private lateinit var mediaPlayer: MediaPlayer
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val editTextN1: EditText = findViewById(R.id.texto_n1)
-        val editTextN2: EditText = findViewById(R.id.texto_n2)
-        val resultado: TextView = findViewById(R.id.resultado)
-        val compararButton: Button = findViewById(R.id.comparar_button)
+        editTextN1 = findViewById(R.id.texto_n1)
+        editTextN2 = findViewById(R.id.texto_n2)
+        resultado = findViewById(R.id.resultado)
+        compararButton = findViewById(R.id.comparar_button)
+        mediaPlayer = MediaPlayer.create(this, R.raw.mario)
 
         compararButton.setOnClickListener {
             val textoN1 = editTextN1.text.toString()
             val textoN2 = editTextN2.text.toString()
 
-            when {
+            val resultadoText = when {
                 textoN1.isEmpty() && textoN2.isEmpty() -> {
-                    resultado.text = "Debe ingresar ambos textos. 😒"
+                    mediaPlayer = MediaPlayer.create(this, R.raw.fallo)
+                    "Debe ingresar ambos textos. 😒"
                 }
-                textoN1.isEmpty() -> {
-                    resultado.text = "Debe ingresar texto en la Primera palabra.\uD83D\uDE32"
-                }
-                textoN2.isEmpty() -> {
-                    resultado.text = "Debe ingresar texto en la Segunda palabra. 😲"
+                textoN1.isEmpty() || textoN2.isEmpty() -> {
+                    mediaPlayer = MediaPlayer.create(this, R.raw.fallo)
+                    "Debe llenar ambos campos. 😲"
                 }
                 textoN1 == textoN2 -> {
-                    resultado.text = "LAS PALABRAS SON IGUALES!!!👍"
+                    mediaPlayer = MediaPlayer.create(this, R.raw.mario)
+                    "LAS PALABRAS SON IGUALES!!!👍"
                 }
                 else -> {
-                    resultado.text = "Las palabras no son iguales. 😭"
+                    mediaPlayer = MediaPlayer.create(this, R.raw.perder)
+                    "Las palabras no son iguales. 😭"
                 }
             }
 
-            // Mostrar el resultado y cerrar el teclado virtual
+            resultado.text = resultadoText
             resultado.visibility = View.VISIBLE
             val inputMethodManager = getSystemService(INPUT_METHOD_SERVICE) as InputMethodManager
             inputMethodManager.hideSoftInputFromWindow(it.windowToken, 0)
+            mediaPlayer.start()
         }
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        mediaPlayer.release()
     }
 }
