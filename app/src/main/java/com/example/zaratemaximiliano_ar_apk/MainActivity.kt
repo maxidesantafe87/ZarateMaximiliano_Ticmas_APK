@@ -41,7 +41,7 @@ class MainActivity : AppCompatActivity() {
                 }
                 textoN1 == textoN2 -> {
                     mediaPlayer = MediaPlayer.create(this, R.raw.mario)
-                    "LAS PALABRAS SON IGUALES!!!👍"
+                    "LAS PALABRAS SON IGUALES!!! 👍"
                 }
                 else -> {
                     mediaPlayer = MediaPlayer.create(this, R.raw.perder)
