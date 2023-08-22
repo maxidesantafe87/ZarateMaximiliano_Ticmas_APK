@@ -33,7 +33,7 @@
                 android:textColor="@color/black"
                 android:textSize="22sp"
                 android:textStyle="bold"
-                android:fontFamily="@font/agentorange"
+                android:fontFamily="@font/agentorangeborde"
                  />
 
             <TextView
@@ -46,7 +46,8 @@
                 android:textColor="@color/black"
                 android:textSize="22sp"
                 android:textStyle="bold"
-                android:fontFamily="@font/agentorange"
+                android:fontFamily="@font/agentorangeborde"
+
                 />
 
         </LinearLayout>
@@ -153,6 +154,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/footer"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="5"
@@ -164,7 +166,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center"
-                android:text="Copyright - 2023   🔥©🔥    Maxi G. Zarate" />
+                android:text="Copyright - 2023   🔥©🔥    Maxi G. Zarate"
+
+
+                />
         </LinearLayout>
 
     </LinearLayout>

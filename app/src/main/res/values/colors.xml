@@ -143,18 +143,10 @@
     <color name="Navy">#000080</color>
     <color name="Black">#000000</color>
 
-    /// calculadora
-    <color name="background_component">#1D1E33</color>
-    <color name="background_component_SELECTED">#FF111328</color>
-    <color name="background_app">#0E0B20</color>
-    <color name="background_button">#EB1555</color>
-    <color name="title_text">#FF8D8E98</color>
-    <color name="purpura_500">#FF6200EE</color>
-
-    <color name="peso_bajo">#FFEB3B</color>
-    <color name="peso_normal">#4CAF50</color>
-    <color name="peso_sobrepeso">#FF5722</color>
-    <color name="peso_obesidad">#E41017</color>
 
 
+
+    <!-- fuego -->
+    <color name="colorFire1">#FF0000</color>
+    <color name="colorFire2">#FFA500</color>
 </resources>
