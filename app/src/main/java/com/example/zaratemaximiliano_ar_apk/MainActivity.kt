@@ -9,13 +9,14 @@ import android.widget.TextView
 import android.view.inputmethod.InputMethodManager
 import android.media.MediaPlayer
 import androidx.lifecycle.ViewModelProvider
+import com.example.zaratemaximiano_ar_apk.MainViewModel
 
 class MainActivity : AppCompatActivity() {
     private lateinit var editTextN1: EditText
     private lateinit var editTextN2: EditText
     private lateinit var resultado: TextView
     private lateinit var compararButton: Button
-    private lateinit var mediaPlayer: MediaPlayer
+
     private lateinit var viewModel: MainViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -26,7 +27,7 @@ class MainActivity : AppCompatActivity() {
         editTextN2 = findViewById(R.id.texto_n2)
         resultado = findViewById(R.id.resultado)
         compararButton = findViewById(R.id.comparar_button)
-        mediaPlayer = MediaPlayer.create(this, R.raw.mario)
+
 
         viewModel = ViewModelProvider(this).get(MainViewModel::class.java)
 
@@ -48,6 +49,6 @@ class MainActivity : AppCompatActivity() {
 
     override fun onDestroy() {
         super.onDestroy()
-        viewModel.releaseMediaPlayer()
+
     }
 }

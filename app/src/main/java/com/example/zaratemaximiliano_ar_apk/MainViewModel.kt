@@ -1,4 +1,4 @@
-package com.example.zaratemaximiliano_ar_apk
+package com.example.zaratemaximiano_ar_apk
 
 import android.app.Application
 import android.media.MediaPlayer
@@ -12,35 +12,23 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
 
     private lateinit var mediaPlayer: MediaPlayer
 
-    init {
-        mediaPlayer = MediaPlayer.create(getApplication(), R.raw.mario)
-    }
-
-    fun compareWords(textoN1: String, textoN2: String) {
+    fun compareWords(textoN1: String, textoN2: String): String {
         val resultadoText = when {
             textoN1.isEmpty() && textoN2.isEmpty() -> {
-                mediaPlayer = MediaPlayer.create(getApplication(), R.raw.fallo)
                 "Debe ingresar ambos textos. 😒"
             }
             textoN1.isEmpty() || textoN2.isEmpty() -> {
-                mediaPlayer = MediaPlayer.create(getApplication(), R.raw.fallo)
                 "Debe llenar ambos campos. 😲"
             }
             textoN1 == textoN2 -> {
-                mediaPlayer = MediaPlayer.create(getApplication(), R.raw.mario)
                 "LAS PALABRAS SON IGUALES!!! 👍"
             }
             else -> {
-                mediaPlayer = MediaPlayer.create(getApplication(), R.raw.perder)
                 "Las palabras no son iguales. 😭"
             }
         }
 
         _result.value = resultadoText
-        mediaPlayer.start()
-    }
-
-    fun releaseMediaPlayer() {
-        mediaPlayer.release()
+        return resultadoText
     }
 }
