@@ -16,7 +16,7 @@ import org.junit.Assert.assertEquals
 
 @RunWith(RobolectricTestRunner::class)
 @Config(manifest = Config.NONE)
-class ExampleUnitTest {
+class TestUnitario {
 
     @get:Rule
     val instantTaskExecutorRule = InstantTaskExecutorRule()
